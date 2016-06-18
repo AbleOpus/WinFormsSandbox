@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4329E779-B4CD-4ED5-96BE-BB02B0827E17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinFormsSandbox</RootNamespace>
+    <AssemblyName>WinFormsSandbox</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\WinFormsSandbox.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\DLLs\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSharpSourceGen.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Forms\ControlColapser.cs" />
+    <Compile Include="Forms\CSharpTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\DialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\DialogBox.Designer.cs">
+      <DependentUpon>DialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EventInfoCheckListItem.cs" />
+    <Compile Include="Forms\FillListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssemblyDescriptor.cs" />
+    <Compile Include="Forms\forms\GacAssembliesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\GacAssembliesDialog.Designer.cs">
+      <DependentUpon>GacAssembliesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IllumToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EventPanelColapser.cs" />
+    <Compile Include="Forms\InfoPanelColapser.cs" />
+    <Compile Include="Forms\forms\MethodReturnValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\MethodReturnValueDialog.Designer.cs">
+      <DependentUpon>MethodReturnValueDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\QuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\QuickView.Designer.cs">
+      <DependentUpon>QuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControlHouser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\CustomCodeQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\CustomCodeQuickView.Designer.cs">
+      <DependentUpon>CustomCodeQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\EventsQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\EventsQuickView.Designer.cs">
+      <DependentUpon>EventsQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\LoadAssemQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\LoadAssemQuickView.Designer.cs">
+      <DependentUpon>LoadAssemQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\LoadObjectsQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\LoadObjectsQuickView.Designer.cs">
+      <DependentUpon>LoadObjectsQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\CreateInstanceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\CreateInstanceDialog.Designer.cs">
+      <DependentUpon>CreateInstanceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\InvokeMethodDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\InvokeMethodDialog.Designer.cs">
+      <DependentUpon>InvokeMethodDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\MethodsQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\MethodsQuickView.Designer.cs">
+      <DependentUpon>MethodsQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quickViews\PropertiesQuickView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\quickViews\PropertiesQuickView.Designer.cs">
+      <DependentUpon>PropertiesQuickView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGathering.cs" />
+    <Compile Include="CustomCodeExecutionResults.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\TestTypeConvertersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\TestTypeConvertersForm.Designer.cs">
+      <DependentUpon>TestTypeConvertersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeConverters\PenTypeConverter.cs" />
+    <Compile Include="TypeConverters\TypeTypeConverter.cs" />
+    <Compile Include="TypeConverters\StringBuilderTypeConverter.cs" />
+    <Compile Include="TypeConverters\IntPtrTypeConverter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\ResizeStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TargetTypeAttribute.cs" />
+    <Compile Include="UnitTests.cs" />
+    <EmbeddedResource Include="Forms\forms\GacAssembliesDialog.resx">
+      <DependentUpon>GacAssembliesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\MethodReturnValueDialog.resx">
+      <DependentUpon>MethodReturnValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\QuickView.resx">
+      <DependentUpon>QuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\CustomCodeQuickView.resx">
+      <DependentUpon>CustomCodeQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\EventsQuickView.resx">
+      <DependentUpon>EventsQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\LoadAssemQuickView.resx">
+      <DependentUpon>LoadAssemQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\LoadObjectsQuickView.resx">
+      <DependentUpon>LoadObjectsQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\CreateInstanceDialog.resx">
+      <DependentUpon>CreateInstanceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\InvokeMethodDialog.resx">
+      <DependentUpon>InvokeMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\MethodsQuickView.resx">
+      <DependentUpon>MethodsQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quickViews\PropertiesQuickView.resx">
+      <DependentUpon>PropertiesQuickView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\TestTypeConvertersForm.resx">
+      <DependentUpon>TestTypeConvertersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DynamicUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
